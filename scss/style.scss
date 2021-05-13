@@ -1,0 +1,194 @@
+$gris:#d0ccc8;
+$azul: #081f49;
+$blanco: #fff;
+$fucsia: #ea4d94;
+$violeta: #85325f;
+$tipografia: 'Viga', sans-serif;
+$anchoFijo: 100%;
+$tamanioPantalla: mobile;
+$background:(
+    nosotros: $violeta,
+    servicios: $violeta,
+    contacto: $azul,
+    blog: $violeta,
+);
+@each $pagina, $color in $background {
+    .body__background--#{$pagina}{
+        background-color: $color;
+    }
+}
+.nav__logo--tamanio {width: 250px;}
+.nav__background--color{background-color: $gris;}
+.nav__formato {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $gris;
+    text-align: center;
+    font-family: $tipografia;
+    font-size: 28px;
+}
+.index__container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.body__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $azul;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+footer a {
+    fill: $blanco;
+    transition: fill 2s;   
+}
+footer a:hover {
+    fill: $fucsia;
+}
+@for $i from 1 through 3 {
+    h#{$i}{
+        font-size: 48px - (6*$i);
+    }
+}
+@mixin estiloTitulos ($color, $font-family, $text-align) {
+    color: $color;
+    font-family: $font-family;
+    text-align: $text-align;
+}
+h1 {
+    @include estiloTitulos ($blanco, $tipografia, left);
+    margin: 20px 10px 15px 25px;
+}
+.aside__mail--formato {
+    font-family: $tipografia;
+    color:$blanco;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.aside__ubicacion--formato {
+    @extend.aside__mail--formato;
+    margin-top: 10px;
+}
+svg {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.section__iframeMap {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.section__formulario--formato {
+    font-family: $tipografia;
+    font-size: 22px;
+    margin-left: 25px;
+}
+.formulario__checkbox--formato {
+    font-size: 16px;
+    color: $blanco;
+    align-items: left;
+}
+.formulario__boton--formato {
+    background-color: $blanco;
+    color: $azul;
+    transition: background-color 2s;
+}
+.formulario__boton--formato:hover {
+    background-color: $fucsia;
+}
+h2 {
+    @include estiloTitulos ($gris, $tipografia, center);
+    margin: 10px 10px 15px 25px;
+}
+h3 {
+    @include estiloTitulos ($fucsia, $tipografia, center);
+}
+p {
+    @include estiloTitulos ($gris, $tipografia, center);
+    font-size: 20px;
+    margin: 5px 10px 15px 25px;
+}
+.article__img--tamanio {
+    width:($anchoFijo/2);
+    margin-bottom: 30px;
+}
+.section__iframeYoutube {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/*.blog__article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.feed__div {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+}*/
+@media only screen and (min-width: 360px) and (max-width: 768px){
+    .nav__logo--tamanio {
+        width: 150px;
+    }
+    .nav__formato {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: 18px;
+    }
+    .footer__svg {
+        width: 15px;
+        height: 15px;
+    }
+    @for $i from 1 through 3 {
+        h#{$i}{
+            font-size: 36px - (6*$i);
+        }
+    }
+    h1 {
+        text-align: center;
+    }
+    .section__formulario--formato {font-size: 16px;}
+    .formulario__checkbox--formato {font-size: 14px;}
+    .aside__mail--formato {font-size: 16px;}
+    .aside__ubicacion--formato {font-size: 16px;}
+    .section__iframeMap {height: 200px;}
+    p {
+        @if $tamanioPantalla == desktop {
+        font-size:20px;
+        text-align:center;
+        }@else if $tamanioPantalla == mobile {
+        font-size: 14px;
+        text-align: center;
+        }@else{
+        font-size:18px;
+        text-align:center;
+        }
+    }
+    .article__img--tamanio {width: 100%;}
+    .section__iframeYoutube {width: 100%;}
+}
+@media only screen and (min-width: 768px) and (min-width: 1024px){
+    .nav__logo--tamanio {width: 200px;}
+    .nav__formato {
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    
+}
