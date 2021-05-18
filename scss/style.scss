@@ -28,8 +28,13 @@ $background:(
     font-size: 28px;
 }
 .index__container-fluid {
-    padding-left: 0px;
-    padding-right: 0px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+}
+.index__container-fluid row {
+    max-width: 100%;
 }
 .body__footer {
     display: flex;
@@ -56,6 +61,12 @@ footer a:hover {
     color: $color;
     font-family: $font-family;
     text-align: $text-align;
+}
+.container-fluid {
+    width: 80%;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
 }
 h1 {
     @include estiloTitulos ($blanco, $tipografia, left);
