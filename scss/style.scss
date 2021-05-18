@@ -28,13 +28,13 @@ $background:(
     font-size: 28px;
 }
 .index__container-fluid {
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto;
     padding-right: 0;
     padding-left: 0;
 }
 .index__container-fluid row {
-    max-width: 100%;
+    width: 100%;
 }
 .body__footer {
     display: flex;
@@ -43,7 +43,6 @@ $background:(
     background-color: $azul;
     padding-top: 15px;
     padding-bottom: 10px;
-    width: 100%;
 }
 footer a {
     fill: $blanco;
@@ -67,6 +66,9 @@ footer a:hover {
     margin: 0 auto;
     padding-right: 0;
     padding-left: 0;
+}
+.container-fluid row {
+    width: 100%;
 }
 h1 {
     @include estiloTitulos ($blanco, $tipografia, left);
@@ -130,11 +132,10 @@ p {
     width:($anchoFijo/2);
     margin-bottom: 30px;
 }
-.section__iframeYoutube {
+.iframeYoutube {
     margin-top: 10px;
     margin-bottom: 10px;
     height: 600px;
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
