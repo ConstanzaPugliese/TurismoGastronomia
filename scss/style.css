@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden;
+}
 .body__background--nosotros { background-color: #85325f; }
 
 .body__background--servicios { background-color: #85325f; }
