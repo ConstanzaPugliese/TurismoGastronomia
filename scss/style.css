@@ -16,7 +16,7 @@ body{
 
 .nav__formato { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-line-pack: start; align-content: flex-start; background-color: #d0ccc8; text-align: center; font-family: "Viga", sans-serif; font-size: 28px; width: 100%; }
 
-.container-fluid { width: 80%; margin: 0 auto; padding-right: 0; padding-left: 0; }
+.container-fluid { width: 100%; margin: 0 auto; padding-right: 0; padding-left: 0; }
 
 body { margin: 0; overflow-x: hidden; }
 
