@@ -22,11 +22,18 @@ $background:(
 .nav__formato {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    align-content: left;
     background-color: $gris;
     text-align: center;
     font-family: $tipografia;
     font-size: 28px;
     width: 100%;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
 }
 .container-fluid {
     width: 80%;
