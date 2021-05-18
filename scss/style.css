@@ -16,9 +16,9 @@
 
 .body__footer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around; background-color: #081f49; padding-top: 15px; padding-bottom: 10px; width: 100%; }
 
-footer a { fill: #fff; -webkit-transition: fill 2s; transition: fill 2s; }
+footer svg { fill: #fff; -webkit-transition: fill 2s; transition: fill 2s; }
 
-footer a:hover { fill: #ea4d94; }
+footer svg:hover { fill: #ea4d94; }
 
 h1 { font-size: 42px; }
 
