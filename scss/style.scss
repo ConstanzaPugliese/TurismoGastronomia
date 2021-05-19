@@ -48,12 +48,12 @@ body {
     padding-bottom: 10px;
     width: 100%;
 }
-footer svg {
+div svg {
     fill: $blanco;
     -webkit-transition: fill 2s; 
     transition: fill 2s;  
 }
-footer svg:hover {
+div svg:hover {
     fill: $fucsia;
 }
 @for $i from 1 through 3 {
@@ -94,7 +94,7 @@ svg {
     margin-left: 5px;
     margin-right: 5px;
 }
-.section__iframeMap {
+.aside__iframeMap {
     margin-right: 10px;
     display: flex;
     flex-direction: row;
@@ -143,6 +143,134 @@ p {
     flex-direction: row;
     justify-content: center;
 }
+.btn--abrir-popup {
+    font-family: $tipografia;
+    font-size: 16px;
+    margin-right: 20px;
+    background-color: $azul;
+    color: $blanco;
+    -webkit-transition: background-color 2s;
+    transition: background-color 2s;
+    justify-content: center;
+    align-items: center;
+}
+.btn--abrir-popup:hover {
+    background-color: $fucsia;
+}
+.overlay {
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    visibility: hidden;
+}
+.overlay.active {
+    visibility: visible;
+}
+.popup {
+    background: $blanco;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+    border-radius: 3px;
+    font-family: $tipografia;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    opacity: 0;
+    transition: .3s ease all;
+    transform: scale(0.7);
+}
+.popup.active {
+    opacity: 1;
+    transform: scale(1);
+}
+.popup.active h1 {
+    animation: entradaTitulo .8s ease .5s forwards;
+}
+.popup.active h3 {
+    animation: entradaSubtitulo .8s ease .5s forwards;
+}
+.popup.active .container-inputs {
+    animation: entradaInputs 1s ease 1s forwards;
+}
+@keyframes entradaTitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes entradaSubtitulo {
+    from {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes entradaInputs {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.popup .btn--cerrar-popup {
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    fill: $gris;
+    -webkit-transition: fill 2s; 
+    transition: fill 2s; 
+}
+.popup .btn--cerrar-popup:hover {
+    fill: $fucsia;
+}
+.popup h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    opacity: 0;
+    color: $violeta;
+}
+.popup h3 {
+    font-size: 26px;
+    margin-bottom: 40px;
+    opacity: 0;
+}
+.popup form .container-inputs {
+    opacity: 0;
+}
+.popup form .container-inputs input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid $violeta;
+}
+.popup form .btn-submit {
+    padding: 0 20px;
+    height: 40px;
+    font-family: $tipografia;
+    font-size: 16px;
+    background-color: $azul;
+    color: $blanco;
+    -webkit-transition: background-color 2s; 
+    transition: background-color 2s;
+}
+.popup form .btn-submit:hover {
+    background-color: $fucsia;
+}
+
+
+
 /**,*:before,*:after{box-sizing:border-box;}
 .body--blog {
 	font-size:100%;

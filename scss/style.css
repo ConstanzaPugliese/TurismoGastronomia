@@ -1,7 +1,3 @@
-body{
-  overflow-x: hidden;
-}
-.row--height{height: 40vw;}
 .body__background--nosotros { background-color: #85325f; }
 
 .body__background--servicios { background-color: #85325f; }
@@ -16,15 +12,15 @@ body{
 
 .nav__formato { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-line-pack: start; align-content: flex-start; background-color: #d0ccc8; text-align: center; font-family: "Viga", sans-serif; font-size: 28px; width: 100%; }
 
-.container-fluid { width: 100%; margin: 0 auto; padding-right: 0; padding-left: 0; }
+.container-fluid { width: 80%; margin: 0 auto; padding-right: 0; padding-left: 0; }
 
 body { margin: 0; overflow-x: hidden; }
 
 .body__footer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around; background-color: #081f49; padding-top: 15px; padding-bottom: 10px; width: 100%; }
 
-footer svg { fill: #fff; -webkit-transition: fill 2s; transition: fill 2s; }
+div svg { fill: #fff; -webkit-transition: fill 2s; transition: fill 2s; }
 
-footer svg:hover { fill: #ea4d94; }
+div svg:hover { fill: #ea4d94; }
 
 h1 { font-size: 42px; }
 
@@ -42,7 +38,7 @@ h1 { color: #fff; font-family: "Viga", sans-serif; text-align: left; margin: 20p
 
 svg { margin-left: 5px; margin-right: 5px; }
 
-.section__iframeMap { margin-right: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.aside__iframeMap { margin-right: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 .section__formulario--formato { font-family: "Viga", sans-serif; font-size: 22px; margin-left: 25px; }
 
@@ -61,6 +57,66 @@ p { color: #d0ccc8; font-family: "Viga", sans-serif; text-align: center; font-si
 .article__img--tamanio { width: 50%; margin-bottom: 30px; }
 
 .iframeYoutube { margin-top: 10px; margin-bottom: 10px; height: 600px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.btn--abrir-popup { font-family: "Viga", sans-serif; font-size: 16px; margin-right: 20px; background-color: #081f49; color: #fff; -webkit-transition: background-color 2s; transition: background-color 2s; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.btn--abrir-popup:hover { background-color: #ea4d94; }
+
+.overlay { background: rgba(0, 0, 0, 0.3); position: fixed; top: 0; bottom: 0; left: 0; right: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; visibility: hidden; }
+
+.overlay.active { visibility: visible; }
+
+.popup { background: #fff; -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); border-radius: 3px; font-family: "Viga", sans-serif; padding: 20px; text-align: center; width: 600px; opacity: 0; -webkit-transition: .3s ease all; transition: .3s ease all; -webkit-transform: scale(0.7); transform: scale(0.7); }
+
+.popup.active { opacity: 1; -webkit-transform: scale(1); transform: scale(1); }
+
+.popup.active h1 { -webkit-animation: entradaTitulo .8s ease .5s forwards; animation: entradaTitulo .8s ease .5s forwards; }
+
+.popup.active h3 { -webkit-animation: entradaSubtitulo .8s ease .5s forwards; animation: entradaSubtitulo .8s ease .5s forwards; }
+
+.popup.active .container-inputs { -webkit-animation: entradaInputs 1s ease 1s forwards; animation: entradaInputs 1s ease 1s forwards; }
+
+@-webkit-keyframes entradaTitulo { from { -webkit-transform: translateY(-25px); transform: translateY(-25px);
+    opacity: 0; }
+  to { -webkit-transform: translateY(0); transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes entradaTitulo { from { -webkit-transform: translateY(-25px); transform: translateY(-25px);
+    opacity: 0; }
+  to { -webkit-transform: translateY(0); transform: translateY(0);
+    opacity: 1; } }
+
+@-webkit-keyframes entradaSubtitulo { from { -webkit-transform: translateY(25px); transform: translateY(25px);
+    opacity: 0; }
+  to { -webkit-transform: translateY(0); transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes entradaSubtitulo { from { -webkit-transform: translateY(25px); transform: translateY(25px);
+    opacity: 0; }
+  to { -webkit-transform: translateY(0); transform: translateY(0);
+    opacity: 1; } }
+
+@-webkit-keyframes entradaInputs { from { opacity: 0; }
+  to { opacity: 1; } }
+
+@keyframes entradaInputs { from { opacity: 0; }
+  to { opacity: 1; } }
+
+.popup .btn--cerrar-popup { font-size: 16px; line-height: 16px; display: block; text-align: right; fill: #d0ccc8; -webkit-transition: fill 2s; transition: fill 2s; }
+
+.popup .btn--cerrar-popup:hover { fill: #ea4d94; }
+
+.popup h1 { font-size: 38px; margin-bottom: 10px; opacity: 0; color: #85325f; }
+
+.popup h3 { font-size: 26px; margin-bottom: 40px; opacity: 0; }
+
+.popup form .container-inputs { opacity: 0; }
+
+.popup form .container-inputs input { width: 100%; margin-bottom: 20px; height: 52px; font-size: 18px; text-align: center; border: 1px solid #85325f; }
+
+.popup form .btn-submit { padding: 0 20px; height: 40px; font-family: "Viga", sans-serif; font-size: 16px; background-color: #081f49; color: #fff; -webkit-transition: background-color 2s; transition: background-color 2s; }
+
+.popup form .btn-submit:hover { background-color: #ea4d94; }
 
 /**,*:before,*:after{box-sizing:border-box;}
 .body--blog {
