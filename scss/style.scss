@@ -17,6 +17,17 @@ $background:(
         background-color: $color;
     }
 }
+.jumbotron {
+    background-color: $azul;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 5px 0 5px 0;
+    margin-bottom: 0;
+}
+.jumbotron p {margin-bottom: 0;}
 .nav__logo--tamanio {width: 250px;}
 .nav__background--color {background-color: $gris}
 .nav__formato {
@@ -39,30 +50,13 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
-.jumbotron {
-    background-color: $azul;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 40px;
-    padding: 5px;
-    margin-bottom: 0;
-}
-footer {
-    background-color: $azul;
-    padding-top: 15px;
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: 0;
-    width: 100%;
-}
+footer {background-color: $azul;}
 .footer__logo {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
 .footer__logo--tamanio {
     width: 250px;
@@ -81,12 +75,12 @@ footer {
 h4 {
     @include estiloTitulos ($blanco, $tipografia, center);
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .footer__rrss--iconos {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: 15px;
 }
 div svg {
     fill: $blanco;
@@ -96,22 +90,47 @@ div svg {
 div svg:hover {
     fill: $fucsia;
 }
-a {
+.footer__contacto {
+    font-family: $tipografia;
+    color:$blanco;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer__GitHub {
+    font-family: $tipografia;
+    color: $gris;
+    font-size: 16px;
+    padding-top: 10px;
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer__GitHub--link {
+    color: $blanco;
+    transition: color text-decoration 2s;
+}
+.footer__GitHub--link:hover {
+    color: $fucsia;
     text-decoration: none;
 }
 h1 {
-    @include estiloTitulos ($blanco, $tipografia, left);
-    margin: 20px 10px 15px 25px;
+    @include estiloTitulos ($blanco, $tipografia, center);
+    margin: 40px 10px 40px 25px;
 }
 .aside__mail--formato {
     font-family: $tipografia;
     color:$blanco;
     font-size: 18px;
-    margin-top: 40px;
+    margin-top:70px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 .aside__ubicacion--formato {
     @extend.aside__mail--formato;
@@ -122,19 +141,21 @@ svg {
     margin-right: 5px;
 }
 .aside__iframeMap {
+    margin-top: 40px;
     margin-right: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .contacto__h2 {
-    margin: 20px 10px 15px 25px;
+    margin: 10px 10px 15px 25px;
     text-align: left;
 }
-.section__formulario--formato {
+.formulario--formato {
     font-family: $tipografia;
     font-size: 22px;
     margin-left: 25px;
+    margin-right: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,10 +175,11 @@ svg {
 }
 h2 {
     @include estiloTitulos ($gris, $tipografia, center);
-    margin: 10px 10px 15px 25px;
+    margin: 0 10px 15px 25px;
 }
 h3 {
     @include estiloTitulos ($fucsia, $tipografia, center);
+    margin-top: 20px;
 }
 p {
     @include estiloTitulos ($gris, $tipografia, center);
@@ -179,14 +201,23 @@ p {
     margin-bottom: 10px;
     height: 600px;
 }
+.card {height: 650px;}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn--centrar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 .btn--abrir-popup {
     font-family: $tipografia;
     font-size: 16px;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 20px;
     background-color: $azul;
     color: $blanco;
     -webkit-transition: background-color 2s;
@@ -374,34 +405,44 @@ p {
 	opacity:0;
 }
 @media only screen and (min-width: 360px) and (max-width: 768px){
-    .nav__logo--tamanio {
-        width: 150px;
-    }
+    .jumbotron {height: 30px;}
+    .jumbotron p {font-size: 10px;}
+    .nav__logo--tamanio {width: 150px;}
     .nav__formato {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         font-size: 18px;
     }
-    .footer__logo--tamanio {width: 80px;}
+    .footer__logo--tamanio {width: 150px;}
     .footer__svg {
         width: 15px;
         height: 15px;
     }
     @for $i from 1 through 4 {
         h#{$i}{
-            font-size: 36px - (6*$i);
+            font-size: 36px - (4*$i);
         }
     }
+    .footer__contacto {font-size: 16px;}
+    .footer__GitHub {
+        font-size: 12px;
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
     .contacto__h2 {
-        margin: 10px 10px 15px 25px;
+        margin: 0 10px 30px 25px; 
         text-align: center;
     }
     .section__formulario--formato {font-size: 16px;}
     .formulario__checkbox--formato {font-size: 14px;}
-    .aside__mail--formato {font-size: 16px;}
+    .aside__mail--formato {font-size: 16px; margin-top: 20px;}
     .aside__ubicacion--formato {font-size: 16px;}
-    .section__iframeMap {height: 200px;}
+    .aside__iframeMap {
+        height: 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     p {
         @if $tamanioPantalla == desktop {
         font-size:20px;
@@ -414,15 +455,12 @@ p {
         text-align:center;
         }
     }
-    .jumbotron {
-        height: 30px;
-    }
-    .jumbotron p {
-        font-size: 10px;
-        padding: 5px;
-    }
     .article__img--tamanio {width: 100%;}
-    .iframeYoutube {height: 300px;}
+    .iframeYoutube {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    .card {height: 470px;}
     .grid__cell{
         flex:0 0 100%;
         position:relative;
@@ -435,6 +473,7 @@ p {
         justify-content: flex-end;
         font-size: 18px;
     }
+    .footer__logo--tamanio {width: 200px;}
     .grid__cell{
         flex:0 0 33.333%;
         padding:30px 0 0 30px;
