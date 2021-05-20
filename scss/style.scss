@@ -18,7 +18,7 @@ $background:(
     }
 }
 .nav__logo--tamanio {width: 250px;}
-.nav__background--color{background-color: $gris}
+.nav__background--color {background-color: $gris}
 .nav__formato {
     display: flex;
     flex-direction: row;
@@ -30,14 +30,25 @@ $background:(
     width: 100%;
 }
 .container-fluid {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 15;
+    padding-left: 15;
 }
 body {
     margin: 0;
     overflow-x: hidden;
+}
+.jumbotron {
+    background-color: $azul;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    padding: 5px;
+    margin-bottom: 0;
 }
 .body__footer {
     display: flex;
@@ -65,12 +76,6 @@ div svg:hover {
     color: $color;
     font-family: $font-family;
     text-align: $text-align;
-}
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding-right: 0;
-    padding-left: 0;
 }
 h1 {
     @include estiloTitulos ($blanco, $tipografia, left);
@@ -100,15 +105,21 @@ svg {
     flex-direction: row;
     justify-content: center;
 }
+.contacto__h2 {
+    margin: 20px 10px 15px 25px;
+    text-align: left;
+}
 .section__formulario--formato {
     font-family: $tipografia;
     font-size: 22px;
     margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .formulario__checkbox--formato {
     font-size: 16px;
     color: $blanco;
-    align-items: left;
 }
 .formulario__boton--formato {
     background-color: $blanco;
@@ -135,24 +146,29 @@ p {
     width:($anchoFijo/2);
     margin-bottom: 30px;
 }
+.section__p--posicion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .iframeYoutube {
     margin-top: 10px;
     margin-bottom: 10px;
     height: 600px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 .btn--abrir-popup {
     font-family: $tipografia;
     font-size: 16px;
     margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: $azul;
     color: $blanco;
     -webkit-transition: background-color 2s;
     transition: background-color 2s;
-    justify-content: center;
-    align-items: center;
 }
 .btn--abrir-popup:hover {
     background-color: $fucsia;
@@ -268,23 +284,7 @@ p {
 .popup form .btn-submit:hover {
     background-color: $fucsia;
 }
-
-
-
-/**,*:before,*:after{box-sizing:border-box;}
-.body--blog {
-	font-size:100%;
-    margin: 0;
-    overflow-x: hidden;
-}
-.img--blog {
-	max-width:100%;
-	height:auto;
-	display:block;
-}
-.a--blog {
-	text-decoration:none;
-}
+*,*:before,*:after{box-sizing:border-box;}
 .container--blog {
 	max-width: 100%;
     margin-right: auto;
@@ -292,30 +292,23 @@ p {
     padding-left: 15px;
     padding-right: 15px;
 }
-.o-fb-grid{
-    display:flex;
-    flex-flow:row wrap;
+.grid {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
 }
-.o-fb-grid--gutters{
-  margin:-5px 0 5px -5px;
-  
-  > .o-fb-grid__cell{
-    padding:3px 0 0 3px;
-		
-		@media screen and (min-width:768px){
-			padding:30px 0 0 30px;
-		}
-  }
+.grid__img {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
 }
-.o-fb-grid__cell{
-    flex:0 0 100%;
-	position:relative;
-}
-.o-fb-grid__link {
+.grid__link {
 	display:block;
 	position:relative;
+    text-decoration: none;
 }
-.o-fb-grid__link:before {
+.grid__link:before {
 		content: "";
 		position: absolute;
 		top: 0;
@@ -325,60 +318,39 @@ p {
 		box-shadow: inset 0px -75px 119px -75px rgba(0,0,0,0.8);
 		transition:all 0.1s linear;
 }
-.o-fb-grid__link:hover::before {background-color:rgba(0,0,0,.5);}
-.o-fb-grid__link:hover .o-fb-grid__text {
+.grid__link:hover::before {background-color:rgba(0,0,0,.5);}
+.grid__link:hover .grid__text {
 	opacity:0;
 	transition:all 0.1s linear;
 }
-.o-fb-grid__link:hover .o-fb-grid__hovertext {
+.grid__link:hover .grid__hovertext {
 	opacity:1;
 	transition:all 0.1s linear;
 }
-.o-fb-grid__link:hover .icon-play3 {opacity:0;}
-.o-fb-grid__img {width:100%}
-.o-fb-grid__text {
+.grid__text {
+    font-family: $tipografia;
 	position:absolute;
 	bottom:10px;
 	left:0px;
 	width:100%;
-	color:#fff;
+	color: $blanco;
 	text-align:center;
 	text-shadow:1px 1px 1px rgba(0,0,0,0.4);
 }
-.o-fb-grid__hovertext {
+.grid__hovertext {
+    font-family: $tipografia;
 	display:flex;
-	align-items:center;
-	justify-content:center;
+	align-items: center;
+	justify-content: center;
 	position:absolute;
 	left:0;
 	top:0;
 	right:0;
 	bottom:0;
-	text-align:center;
-	color:#fff;
+	text-align: center;
+	color: $blanco;
 	opacity:0;
 }
-.icon-play3 {
-	font-size:40px;
-	transform:translate(-50%, -50%);
-	height:50px;
-	width:50px;
-	position:absolute;
-	left:50%;
-	top:50%;
-	background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/93835/play_50x50.png) no-repeat left top;
-}*/
-/*.blog__article {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.feed__div {
-    margin-bottom: 8px;
-    margin-top: 8px;
-    margin-left: 8px;
-    margin-right: 8px;
-}*/
 @media only screen and (min-width: 360px) and (max-width: 768px){
     .nav__logo--tamanio {
         width: 150px;
@@ -398,7 +370,9 @@ p {
             font-size: 36px - (6*$i);
         }
     }
-    h1 {
+    h1 {text-align: center;}
+    .contacto__h2 {
+        margin: 10px 10px 15px 25px;
         text-align: center;
     }
     .section__formulario--formato {font-size: 16px;}
@@ -418,9 +392,19 @@ p {
         text-align:center;
         }
     }
+    .jumbotron {
+        height: 30px;
+    }
+    .jumbotron p {
+        font-size: 10px;
+        padding: 5px;
+    }
     .article__img--tamanio {width: 100%;}
-    .section__iframeYoutube {width: 100%;}
-    .o-fb-grid__cell{flex:0 0 50%;}
+    .iframeYoutube {height: 300px;}
+    .grid__cell{
+        flex:0 0 100%;
+        position:relative;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     .nav__logo--tamanio {width: 200px;}
@@ -429,7 +413,10 @@ p {
         justify-content: flex-end;
         font-size: 18px;
     }
-    .o-fb-grid__cell{flex:0 0 33.333%;}
+    .grid__cell{
+        flex:0 0 33.333%;
+        padding:30px 0 0 30px;
+    }
 }
 @media only screen and (max-width: 1024px){
     
