@@ -50,14 +50,43 @@ body {
     padding: 5px;
     margin-bottom: 0;
 }
-.body__footer {
+footer {
+    background-color: $azul;
+    padding-top: 15px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+.footer__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer__logo--tamanio {
+    width: 250px;
+    height: auto;
+}
+@for $i from 1 through 4 {
+    h#{$i}{
+        font-size: 48px - (6*$i);
+    }
+}
+@mixin estiloTitulos ($color, $font-family, $text-align) {
+    color: $color;
+    font-family: $font-family;
+    text-align: $text-align;
+}
+h4 {
+    @include estiloTitulos ($blanco, $tipografia, center);
+    margin-top: 20px;
+}
+.footer__rrss--iconos {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: $azul;
     padding-top: 15px;
-    padding-bottom: 10px;
-    width: 100%;
 }
 div svg {
     fill: $blanco;
@@ -67,15 +96,8 @@ div svg {
 div svg:hover {
     fill: $fucsia;
 }
-@for $i from 1 through 3 {
-    h#{$i}{
-        font-size: 48px - (6*$i);
-    }
-}
-@mixin estiloTitulos ($color, $font-family, $text-align) {
-    color: $color;
-    font-family: $font-family;
-    text-align: $text-align;
+a {
+    text-decoration: none;
 }
 h1 {
     @include estiloTitulos ($blanco, $tipografia, left);
@@ -361,16 +383,16 @@ p {
         justify-content: flex-end;
         font-size: 18px;
     }
+    .footer__logo--tamanio {width: 80px;}
     .footer__svg {
         width: 15px;
         height: 15px;
     }
-    @for $i from 1 through 3 {
+    @for $i from 1 through 4 {
         h#{$i}{
             font-size: 36px - (6*$i);
         }
     }
-    h1 {text-align: center;}
     .contacto__h2 {
         margin: 10px 10px 15px 25px;
         text-align: center;
