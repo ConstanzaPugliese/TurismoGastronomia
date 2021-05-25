@@ -50,9 +50,13 @@ div svg:hover { fill: #ea4d94; }
 
 .footer__GitHub--link:hover { color: #ea4d94; text-decoration: none; }
 
+.article__contacto { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
 h1 { color: #fff; font-family: "Viga", sans-serif; text-align: center; margin: 40px 10px 40px 25px; }
 
-.aside__mail--formato, .aside__ubicacion--formato { font-family: "Viga", sans-serif; color: #fff; font-size: 18px; margin-top: 70px; margin-bottom: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+h2 { color: #d0ccc8; font-family: "Viga", sans-serif; text-align: center; margin: 0 10px 15px 25px; }
+
+.aside__mail--formato, .aside__ubicacion--formato { font-family: "Viga", sans-serif; color: #fff; font-size: 18px; margin-top: 140px; margin-bottom: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .aside__ubicacion--formato { margin-top: 10px; }
 
@@ -60,17 +64,13 @@ svg { margin-left: 5px; margin-right: 5px; }
 
 .aside__iframeMap { margin-top: 40px; margin-right: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-.contacto__h2 { margin: 10px 10px 15px 25px; text-align: left; }
-
-.formulario--formato { font-family: "Viga", sans-serif; font-size: 22px; margin-left: 25px; margin-right: 25px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.formulario--formato { font-family: "Viga", sans-serif; font-size: 22px; }
 
 .formulario__checkbox--formato { font-size: 16px; color: #fff; }
 
 .formulario__boton--formato { background-color: #fff; color: #081f49; -webkit-transition: background-color 2s; transition: background-color 2s; }
 
 .formulario__boton--formato:hover { background-color: #ea4d94; }
-
-h2 { color: #d0ccc8; font-family: "Viga", sans-serif; text-align: center; margin: 0 10px 15px 25px; }
 
 h3 { color: #ea4d94; font-family: "Viga", sans-serif; text-align: center; margin-top: 20px; }
 
@@ -82,7 +82,7 @@ p { color: #d0ccc8; font-family: "Viga", sans-serif; text-align: center; font-si
 
 .iframeYoutube { margin-top: 10px; margin-bottom: 10px; height: 600px; }
 
-.card { height: 650px; }
+.card { height: 700px; }
 
 .card-body { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
@@ -191,7 +191,7 @@ p { color: #d0ccc8; font-family: "Viga", sans-serif; text-align: center; font-si
   p { font-size: 14px; text-align: center; }
   .article__img--tamanio { width: 100%; }
   .iframeYoutube { height: 300px; margin-bottom: 20px; }
-  .card { height: 470px; }
+  .card { height: 520px; }
   .grid__cell { -webkit-box-flex: 0; -ms-flex: 0 0 100%; flex: 0 0 100%; position: relative; } }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) { .nav__logo--tamanio { width: 200px; }
