@@ -76,17 +76,21 @@ svg { margin-left: 5px; margin-right: 5px; }
 
 .formulario--formato textarea { font-size: 20px; }
 
-.form-control:focus { border: 1px solid #ea4d94; outline: none; }
+.form-control:focus { border-color: #ea4d94; -webkit-box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; outline: 0 none; }
 
-.custom-select:focus { color: #ea4d94; outline: none; }
-
-#customCheck1:focus { background: #ea4d94; outline: none; -webkit-appearance: none; }
+.custom-select:focus { border-color: #ea4d94; -webkit-box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; outline: 0 none; }
 
 .formulario__checkbox--formato { font-size: 16px; color: #fff; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
+.custom-control-label:before { background-color: #fff; }
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before { background-color: #ea4d94; border-color: #ea4d94; -webkit-box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; }
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='white' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"); }
+
 .formulario__boton--formato { font-size: 16px; background-color: #fff; color: #081f49; -webkit-transition: background-color 2s; }
 
-.formulario__boton--formato:hover { background-color: #ea4d94; }
+.formulario__boton--formato:hover { background-color: #ea4d94; -webkit-box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; }
 
 .article__redireccion { margin-bottom: 169px; }
 
@@ -108,11 +112,11 @@ p { color: #d0ccc8; font-family: "Viga", sans-serif; text-align: center; font-si
 
 .btn--abrir-popup { font-family: "Viga", sans-serif; font-size: 16px; margin-bottom: 20px; background-color: #081f49; color: #fff; -webkit-transition: background-color 2s; }
 
-.btn--abrir-popup:hover { background-color: #ea4d94; color: #fff; }
+.btn--abrir-popup:hover { background-color: #ea4d94; color: #fff; -webkit-box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; }
 
 .cross--formato { fill: #081f49; -webkit-transition: fill .2s; }
 
-.cross--formato:hover { fill: #ea4d94; }
+.cross--formato:hover { fill: #ea4d94; -webkit-box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; }
 
 .servicios__formulario--formato { font-family: "Viga", sans-serif; padding-left: 25px; padding-right: 25px; }
 
@@ -122,7 +126,7 @@ p { color: #d0ccc8; font-family: "Viga", sans-serif; text-align: center; font-si
 
 .btn--suscribirse { font-family: "Viga", sans-serif; font-size: 16px; background-color: #081f49; color: #fff; -webkit-transition: background-color 2s; }
 
-.btn--suscribirse:hover { background-color: #ea4d94; color: #fff; }
+.btn--suscribirse:hover { background-color: #ea4d94; color: #fff; -webkit-box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; box-shadow: 0 1px 1px #ea4d94 inset, 0 0 8px #ea4d94; }
 
 *, *:before, *:after { -webkit-box-sizing: border-box; box-sizing: border-box; }
 

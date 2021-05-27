@@ -171,18 +171,15 @@ svg {
 .formulario--formato input {font-size: 20px;}
 .formulario--formato select {font-size: 20px;}
 .formulario--formato textarea {font-size: 20px;}
-.form-control:focus {
-    border: 1px solid $fucsia;
-    outline: none;
+.form-control:focus {   
+    border-color: $fucsia;
+    box-shadow: 0 1px 1px $fucsia inset, 0 0 8px $fucsia;
+    outline: 0 none;
 }
 .custom-select:focus {
-    color: $fucsia;
-    outline: none;
-}
-#customCheck1:focus {
-    background: $fucsia;
-    outline: none;
-    -webkit-appearance: none;
+    border-color: $fucsia;
+    box-shadow: 0 1px 1px $fucsia inset, 0 0 8px $fucsia;
+    outline: 0 none;
 }
 .formulario__checkbox--formato {
     font-size: 16px;
@@ -192,6 +189,17 @@ svg {
     align-items: center;
     justify-content: center;
 }
+.custom-control-label:before {
+    background-color: $blanco;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: $fucsia;
+    border-color: $fucsia;
+    box-shadow: 0 1px 1px $fucsia inset, 0 0 8px $fucsia;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='white' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+}
 .formulario__boton--formato {
     font-size: 16px;
     background-color: $blanco;
@@ -200,6 +208,7 @@ svg {
 }
 .formulario__boton--formato:hover {
     background-color: $fucsia;
+    box-shadow: 0 1px 1px $fucsia inset, 0 0 8px $fucsia;
 }
 .article__redireccion {margin-bottom: 169px;}
 h3 {
@@ -250,6 +259,7 @@ p {
 .btn--abrir-popup:hover {
     background-color: $fucsia;
     color: $blanco;
+    box-shadow: 0 1px 1px $fucsia inset, 0 0 8px $fucsia;
 }
 .cross--formato {
     fill: $azul;
@@ -257,6 +267,7 @@ p {
 }
 .cross--formato:hover {
     fill: $fucsia;
+    box-shadow: 0 1px 1px $fucsia inset, 0 0 8px $fucsia;
 }
 .servicios__formulario--formato {
     font-family: $tipografia;
@@ -280,6 +291,7 @@ p {
 .btn--suscribirse:hover {
     background-color: $fucsia;
     color: $blanco;
+    box-shadow: 0 1px 1px $fucsia inset, 0 0 8px $fucsia;
 }
 *,*:before,*:after{box-sizing:border-box;}
 .container--blog {
