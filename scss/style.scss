@@ -2,21 +2,9 @@ $gris:#d0ccc8;
 $azul: #081f49;
 $blanco: #fff;
 $fucsia: #ea4d94;
-$violeta: #85325f;
 $tipografia: 'Viga', sans-serif;
 $anchoFijo: 100%;
 $tamanioPantalla: mobile;
-$background:(
-    nosotros: $violeta,
-    servicios: $violeta,
-    contacto: $azul,
-    blog: $violeta,
-);
-@each $pagina, $color in $background {
-    .body__background--#{$pagina}{
-        background-color: $color;
-    }
-}
 .jumbotron {
     background-color: $azul;
     display: flex;
@@ -27,7 +15,10 @@ $background:(
     padding: 5px 0 5px 0;
     margin-bottom: 0;
 }
-.jumbotron p {margin-bottom: 0;}
+.jumbotron p {
+    margin-bottom: 0;
+    color: $blanco;
+}
 .nav__logo--tamanio {width: 250px;}
 .nav__background--color {background-color: $gris}
 .nav__formato {
@@ -131,6 +122,9 @@ div svg:hover {
     color: $fucsia;
     text-decoration: none;
 }
+.background--color {
+    background-color: $azul;
+}
 .article__contacto {
     display: flex;
     flex-direction: column;
@@ -148,7 +142,7 @@ h2 {
     font-family: $tipografia;
     color:$blanco;
     font-size: 20px;
-    margin-top: 140px;
+    margin-top: 30px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
@@ -211,6 +205,15 @@ svg {
     box-shadow: 0 1px 1px $fucsia inset, 0 0 8px $fucsia;
 }
 .article__redireccion {margin-bottom: 169px;}
+.parallax {
+    background-image: url("../assets/img/ciudad.jpg");
+    width: 100%;
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+}
 h3 {
     @include estiloTitulos ($fucsia, $tipografia, center);
     margin-top: 20px;
@@ -235,6 +238,16 @@ p {
     margin-bottom: 20px;
     height: 600px;
 }
+.background {
+    background-image: url("../assets/img/sayagata.png");
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat round;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+.fucsia {color: $fucsia;}
 .card {height: 700px;}
 .card-body {
     display: flex;
@@ -424,9 +437,9 @@ p {
     .btn--abrir-popup {font-size: 12px;}
     .servicios__formulario--formato input {font-size: 14px;}
     .btn--suscribirse {font-size: 12px;}
-    .grid__cell{
-        flex:0 0 100%;
-        position:relative;
+    .grid__cell {
+        flex: 0 0 100%;
+        position: relative;
     }
 }
 /*@media only screen and (min-width: 768px) and (max-width: 1024px){

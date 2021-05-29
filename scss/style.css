@@ -1,14 +1,6 @@
-.body__background--nosotros { background-color: #85325f; }
-
-.body__background--servicios { background-color: #85325f; }
-
-.body__background--contacto { background-color: #081f49; }
-
-.body__background--blog { background-color: #85325f; }
-
 .jumbotron { background-color: #081f49; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 40px; padding: 5px 0 5px 0; margin-bottom: 0; }
 
-.jumbotron p { margin-bottom: 0; }
+.jumbotron p { margin-bottom: 0; color: #fff; }
 
 .nav__logo--tamanio { width: 250px; }
 
@@ -54,13 +46,15 @@ div svg:hover { fill: #ea4d94; }
 
 .footer__GitHub--link:hover { color: #ea4d94; text-decoration: none; }
 
+.background--color { background-color: #081f49; }
+
 .article__contacto { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 h1 { color: #fff; font-family: "Viga", sans-serif; text-align: center; margin: 40px 10px 40px 25px; }
 
 h2 { color: #d0ccc8; font-family: "Viga", sans-serif; text-align: center; margin: 0 10px 15px 25px; }
 
-.aside__mail--formato, .aside__ubicacion--formato { font-family: "Viga", sans-serif; color: #fff; font-size: 20px; margin-top: 140px; margin-bottom: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.aside__mail--formato, .aside__ubicacion--formato { font-family: "Viga", sans-serif; color: #fff; font-size: 20px; margin-top: 30px; margin-bottom: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .aside__ubicacion--formato { margin-top: 10px; }
 
@@ -94,6 +88,8 @@ svg { margin-left: 5px; margin-right: 5px; }
 
 .article__redireccion { margin-bottom: 169px; }
 
+.parallax { background-image: url("../assets/img/ciudad.jpg"); width: 100%; height: 400px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; /*background-size: cover;*/ }
+
 h3 { color: #ea4d94; font-family: "Viga", sans-serif; text-align: center; margin-top: 20px; }
 
 p { color: #d0ccc8; font-family: "Viga", sans-serif; text-align: center; font-size: 20px; margin: 5px 10px 15px 25px; }
@@ -103,6 +99,10 @@ p { color: #d0ccc8; font-family: "Viga", sans-serif; text-align: center; font-si
 .section__p--posicion { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 .iframeYoutube { margin-top: 10px; margin-bottom: 20px; height: 600px; }
+
+.background { background-image: url("../assets/img/sayagata.png"); height: 400px; background-attachment: fixed; background-position: center; background-repeat: repeat round; background-size: cover; margin-bottom: 50px; }
+
+.fucsia { color: #ea4d94; }
 
 .card { height: 700px; }
 
