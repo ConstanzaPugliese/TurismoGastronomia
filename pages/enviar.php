@@ -20,7 +20,7 @@ if (!$_POST){
     $headers .= "X-Priority: 3\n";
     $headers .= "X-MSMail-Priority: Normal\n";
     $headers .= "X-Mailer: php\n";
-    $headers .= "From: \"".$_POST['nombre']." ".$_POST['apellido']."\" <".$remitente.">\n";
+    $headers .= "From: \"".$_POST['nombre']." ".$_POST['email']." ".$_POST['telefono']." ".$_POST['mensaje']."\" <".$remitente.">\n";
 
     mail($destinatario, $asunto, $cuerpo, $headers);
     
